@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Lesson or Performance | MJCMusic</title>
+  <meta name="description" content="Book music lessons or performance bookings with MJCMusic using a simple online request form." />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">MJC Music</a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="performances.html">Performances</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Book</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-primary">
+      <div class="container section-header">
+        <span class="eyebrow">Book a Session</span>
+        <h2>Request a lesson or performance booking</h2>
+        <p>Fill out the form below and I’ll follow up with availability, pricing, and next steps.</p>
+      </div>
+
+      <div class="container contact-panel">
+        <div>
+          <div class="contact-card">
+            <p><strong>Email:</strong> <a href="mailto:contact@mjcmusic.org">contact@mjcmusic.org</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+12533803876">+1 (253) 380-3876</a></p>
+            <p><strong>Location:</strong> Local teaching and performance availability in Washington State, with online lesson options.</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <form id="booking-form">
+            <div class="form-variation-toggle" role="group" aria-label="Choose request type">
+              <button type="button" class="btn toggle-btn active" data-form="student">Student Request</button>
+              <button type="button" class="btn toggle-btn" data-form="general">General Request</button>
+            </div>
+            <input type="hidden" name="formType" value="Student Request">
+            <label>
+              <span class="label-text">Your Name <span class="required-star" aria-hidden="true">*</span></span>
+              <input type="text" name="name" required placeholder="Your full name">
+            </label>
+            <label>
+              <span class="label-text">Email <span class="required-star" aria-hidden="true">*</span></span>
+              <input type="email" name="email" required placeholder="you@example.com">
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" placeholder="Optional">
+            </label>
+            <div class="student-fields">
+              <label>
+                <span class="label-text">Student Name <span class="required-star" aria-hidden="true">*</span></span>
+                <input type="text" name="studentName" placeholder="Student's full name">
+              </label>
+              <label>
+                <span class="label-text">Student Grade <span class="required-star" aria-hidden="true">*</span></span>
+                <input type="text" name="grade" placeholder="e.g. Grade 8 or Beginner">
+              </label>
+            </div>
+            <label>
+              <span class="label-text">Request Type <span class="required-star" aria-hidden="true">*</span></span>
+              <select name="service">
+                <option>Weekly Lessons</option>
+                <option>Audition Prep</option>
+                <option>Performance Booking</option>
+                <option>Online Consultation</option>
+                <option>Product Inquiry</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>
+              <span class="label-text">Preferred Date <span class="required-star" aria-hidden="true">*</span></span>
+              <input type="date" name="date">
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="Tell me a little about your goals or event."></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Send Request</button>
+            <p id="booking-message" class="booking-message"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>MJC Music © 2026. Private music lessons and performance bookings.</p>
+      <div class="social-links">
+        <a href="https://www.youtube.com/channel/YOUR_CHANNEL_ID" target="_blank" rel="noreferrer noopener" aria-label="YouTube">YouTube</a>
+        <a href="https://www.instagram.com/YOUR_HANDLE" target="_blank" rel="noreferrer noopener" aria-label="Instagram">Instagram</a>
+        <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" rel="noreferrer noopener" aria-label="Facebook">Facebook</a>
+      </div>
+      <p>Designed by <a href="https://sws.rf.gd/" target="_blank">Shadow Wolf Studios</a>.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+  <script src="js/menu.js" defer></script>
+</body>
+</html>

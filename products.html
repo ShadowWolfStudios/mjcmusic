@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | MJCMusic</title>
+  <meta name="description" content="Browse and order music products and resources from MJCMusic." />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">MJC Music</a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="performances.html">Performances</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Book</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-primary">
+      <div class="container section-header">
+        <span class="eyebrow">Shop</span>
+        <h2>Music resources and materials</h2>
+        <p>Explore our collection of music products designed to enhance your practice and performance.</p>
+      </div>
+
+      <div class="container products-grid">
+        <article class="product-card">
+          <h3>Practice Guide (Coming Soon)</h3>
+          <p>Comprehensive guide with practice strategies, exercises, and techniques for daily improvement.</p>
+          <p class="product-price">$19.99</p>
+          <button class="btn btn-primary" onclick="orderProduct('Practice Guide', '$19.99')">Order Now</button>
+        </article>
+        <article class="product-card">
+          <h3>Wind Technique Book (Coming Soon)</h3>
+          <p>Comprehensive technique book for wind instrument players. With basic warm ups, chorales, technical exercises, and chromatic exercises.</p>
+          <p class="product-price">$24.99</p>
+          <button class="btn btn-primary" onclick="orderProduct('Wind Technique Book', '$24.99')">Order Now</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>MJC Music © 2026. Private music lessons and performance bookings.</p>
+      <div class="social-links">
+        <a href="https://www.youtube.com/channel/YOUR_CHANNEL_ID" target="_blank" rel="noreferrer noopener" aria-label="YouTube">YouTube</a>
+        <a href="https://www.instagram.com/YOUR_HANDLE" target="_blank" rel="noreferrer noopener" aria-label="Instagram">Instagram</a>
+        <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" rel="noreferrer noopener" aria-label="Facebook">Facebook</a>
+      </div>
+      <p>Designed by <a href="https://sws.rf.gd/" target="_blank">Shadow Wolf Studios</a>.</p>
+    </div>
+  </footer>
+  <script src="js/menu.js" defer></script>
+  <script src="js/products.js" defer></script>
+</body>
+</html>
