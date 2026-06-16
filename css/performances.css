@@ -1,0 +1,17 @@
+/* Page-specific spacing for performances.html */
+.section-dark {
+  padding: 6rem 0;
+}
+.performance-grid {
+  gap: 2.5rem;
+}
+.performance-details {
+  display: grid;
+  gap: 1.5rem;
+}
+.performance-copy {
+  padding-bottom: 0.5rem;
+}
+.hero-actions {
+  margin-top: 2rem;
+}

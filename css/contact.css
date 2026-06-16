@@ -1,0 +1,53 @@
+/* Page-specific styling for contact.html */
+.section-primary {
+  padding: 5.5rem 0;
+}
+.contact-panel {
+  gap: 2.25rem;
+}
+.form-variation-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.toggle-btn {
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  background: transparent;
+  color: var(--text);
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.required-star {
+  color: #f87171;
+  margin-left: 0.25rem;
+}
+
+.label-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.toggle-btn.active {
+  background: var(--accent);
+  color: #091422;
+  border-color: var(--accent);
+}
+
+.student-fields {
+  display: grid;
+  gap: 1rem;
+}
+
+.student-fields label {
+  margin-bottom: 0;
+}
+
+.hero-actions {
+  margin-top: 2rem;
+}

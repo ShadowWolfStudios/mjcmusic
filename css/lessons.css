@@ -1,0 +1,23 @@
+/* Page-specific spacing for lessons.html */
+.section-primary {
+  padding: 5.5rem 0;
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.75rem;
+  align-items: start;
+}
+.cards-grid article.card {
+  min-height: 180px;
+}
+.card-full {
+  grid-column: 1 / -1;
+}
+.section-header + .cards-grid,
+.cards-grid + .section-header {
+  margin-top: 2.75rem;
+}
+.hero-actions {
+  margin-top: 2rem;
+}

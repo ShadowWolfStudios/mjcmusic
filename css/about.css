@@ -1,0 +1,61 @@
+/* Page-specific spacing for about.html */
+.section-light {
+  padding: 6rem 0;
+}
+.about-grid {
+  gap: 3rem;
+}
+.section-header + .about-grid {
+  margin-top: 2.5rem;
+}
+.profile-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1.75rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.profile-image {
+  width: 180px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.profile-text h3 {
+  margin-top: 0;
+}
+
+.profile-text p {
+  margin: 0.75rem 0 0;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .profile-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-image {
+    margin: 0 auto;
+  }
+}
+
+.hero-actions {
+  margin-top: 2rem;
+}

@@ -1,0 +1,7 @@
+/* Page-specific overrides for index.html */
+.hero {
+  min-height: calc(100vh - 90px);
+}
+.hero-actions {
+  margin-top: 2.25rem;
+}
