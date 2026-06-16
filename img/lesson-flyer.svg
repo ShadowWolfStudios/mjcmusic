@@ -1,0 +1,14 @@
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1600" fill="#0B1222"/>
+  <rect x="80" y="80" width="1040" height="1440" rx="32" fill="#111A33"/>
+  <path d="M0 640L480 0H1200V960L720 1600H0V640Z" fill="#1B2A47"/>
+  <text x="120" y="240" fill="#F8B72E" font-family="Inter, sans-serif" font-size="96" font-weight="700">MJCMusic</text>
+  <text x="120" y="360" fill="#F8B72E" font-family="Inter, sans-serif" font-size="64" font-weight="600">Private Lessons</text>
+  <text x="120" y="520" fill="#EFF6FF" font-family="Inter, sans-serif" font-size="36" letter-spacing="0.2em">CLARINET • SAXOPHONE</text>
+  <text x="120" y="620" fill="#EFF6FF" font-family="Inter, sans-serif" font-size="32">Beginner to Intermediate</text>
+  <rect x="120" y="740" width="420" height="4" fill="#F8B72E"/>
+  <text x="120" y="880" fill="#F8B72E" font-family="Inter, sans-serif" font-size="48" font-weight="700">Schedule Now</text>
+  <text x="120" y="980" fill="#EFF6FF" font-family="Inter, sans-serif" font-size="28">Email: contact@mjcmusic.org</text>
+  <text x="120" y="1040" fill="#EFF6FF" font-family="Inter, sans-serif" font-size="28">Phone: (253) 380-3876</text>
+  <text x="120" y="1100" fill="#EFF6FF" font-family="Inter, sans-serif" font-size="28">Website: https://mjcmusic.org</text>
+</svg>
