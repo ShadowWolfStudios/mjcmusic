@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://mjcmusic.org/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mjcmusic.org/img/logo2.png</image:loc>
+      <image:caption>MJC Music logo</image:caption>
+    </image:image>
+  </url>
   <url>
     <loc>https://mjcmusic.org/index.html</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mjcmusic.org/img/logo2.png</image:loc>
+      <image:caption>MJC Music logo</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://mjcmusic.org/about.html</loc>
@@ -23,6 +38,10 @@
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mjcmusic.org/img/lesson-flyer.png</image:loc>
+      <image:caption>Lesson flyer</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://mjcmusic.org/performances.html</loc>
