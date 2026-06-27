@@ -23,46 +23,66 @@
 
   setFormVariation("student");
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
+  form.addEventListener("submit", async (event) => {
 
-    const formData = new FormData(form);
-    const name = formData.get("name")?.toString().trim();
-    const email = formData.get("email")?.toString().trim();
-    const phone = formData.get("phone")?.toString().trim();
-    const formType = formData.get("formType")?.toString().trim();
-    const studentName = formData.get("studentName")?.toString().trim();
-    const grade = formData.get("grade")?.toString().trim();
-    const service = formData.get("service")?.toString().trim();
-    const date = formData.get("date")?.toString().trim();
-    const details = formData.get("message")?.toString().trim();
-
-    if (!name || !email) {
-      message.textContent = "Please enter your name and email to send the request.";
-      return;
-    }
-
-    const subject = encodeURIComponent(`MJC Music Inquiry from ${name}`);
-    const bodyLines = [
-      `Form type: ${formType}`,
-      `Name: ${name}`,
-      `Email: ${email}`,
-      `Phone: ${phone || "Not provided"}`,
-    ];
-
-    if (formType === "Student Request") {
-      bodyLines.push(`Student Name: ${studentName || "Not provided"}`);
-      bodyLines.push(`Student Grade: ${grade || "Not provided"}`);
-    }
-
-    bodyLines.push(`Request type: ${service}`);
-    bodyLines.push(`Preferred date: ${date || "Flexible"}`);
-    bodyLines.push("Message:");
-    bodyLines.push(details || "No additional message provided.");
-
-    const body = encodeURIComponent(bodyLines.join("\n"));
-    const mailto = `mailto:contact@mjcmusic.org?subject=${subject}&body=${body}`;
-    window.location.href = mailto;
-    message.textContent = "Your request is ready in your email app. Send it to complete booking.";
+  event.preventDefault();
+  
+  message.textContent =
+  "Sending request...";
+  
+  const email =
+  document.getElementById("email");
+  
+  const replyInput =
+  form.querySelector(
+  'input[name="_replyto"]'
+  );
+  
+  if(replyInput && email){
+  replyInput.value =
+  email.value;
+  }
+  
+  try{
+  
+  const response =
+  await fetch(
+  form.action,
+  {
+  method:"POST",
+  body:new FormData(form),
+  headers:{
+  Accept:
+  "application/json"
+  }
+  }
+  );
+  
+  if(response.ok){
+  
+  message.textContent =
+  "Request sent! I'll follow up with pricing and next steps 🎵";
+  
+  form.reset();
+  
+  setFormVariation(
+  "student"
+  );
+  
+  }
+  else{
+  
+  message.textContent =
+  "Couldn't send request.";
+  
+  }
+  
+  }catch{
+  
+  message.textContent =
+  "Connection issue. Try again.";
+  
+  }
+  
   });
 });
