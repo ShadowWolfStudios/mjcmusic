@@ -24,65 +24,35 @@
   setFormVariation("student");
 
   form.addEventListener("submit", async (event) => {
-
-  event.preventDefault();
+    event.preventDefault();
   
-  message.textContent =
-  "Sending request...";
+    message.textContent = "Sending request... 🎵";
   
-  const email =
-  document.getElementById("email");
+    try {
+      const formData = new FormData(form);
   
-  const replyInput =
-  form.querySelector(
-  'input[name="_replyto"]'
-  );
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
   
-  if(replyInput && email){
-  replyInput.value =
-  email.value;
-  }
+      const data = await response.json();
   
-  try{
+      if (response.ok && data.success) {
+        message.textContent =
+          "Request sent! I'll follow up with pricing and next steps 🎶";
   
-  const response =
-  await fetch(
-  form.action,
-  {
-  method:"POST",
-  body:new FormData(form),
-  headers:{
-  Accept:
-  "application/json"
-  }
-  }
-  );
-  
-  if(response.ok){
-  
-  message.textContent =
-  "Request sent! I'll follow up with pricing and next steps 🎵";
-  
-  form.reset();
-  
-  setFormVariation(
-  "student"
-  );
-  
-  }
-  else{
-  
-  message.textContent =
-  "Couldn't send request.";
-  
-  }
-  
-  }catch{
-  
-  message.textContent =
-  "Connection issue. Try again.";
-  
-  }
-  
+        form.reset();
+        setFormVariation("student");
+      } else {
+        message.textContent =
+          data.message || "Something went wrong sending your request.";
+      }
+    } catch (err) {
+      message.textContent = "Connection issue. Try again.";
+    }
   });
 });
