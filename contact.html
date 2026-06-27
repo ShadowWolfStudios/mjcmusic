@@ -57,18 +57,15 @@
           </div>
         </div>
         <div class="contact-card">
-          <form
-          id="booking-form"
-          action="https://formspree.io/f/xojodbbq"
-          method="POST">
+          <form id="booking-form" action="https://api.web3forms.com/submit" method="POST">
             <div class="form-variation-toggle" role="group" aria-label="Choose request type">
               <button type="button" class="btn toggle-btn active" data-form="student">Student Request</button>
               <button type="button" class="btn toggle-btn" data-form="general">General Request</button>
             </div>
             <input type="hidden" name="formType" value="Student Request">
-            <input type="hidden" name="_subject" value="New MJC Music Booking">
-            <input type="hidden" name="_next" value="https://mjcmusic.org/contact.html">
-            <input type="hidden" name="_replyto">
+            <input type="hidden" name="access_key" value="7ff7bc67-9baa-4012-8cc0-1778cdba6eb3">
+            <input type="hidden" name="subject" value="New MJC Music Booking">
+            <input type="hidden" name="redirect" value="https://mjcmusic.org/contact.html">
             <label>
               <span class="label-text">Your Name <span class="required-star" aria-hidden="true">*</span></span>
               <input type="text" name="name" required placeholder="Your full name">
