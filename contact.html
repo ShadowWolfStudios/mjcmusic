@@ -66,13 +66,16 @@
               <button type="button" class="btn toggle-btn" data-form="general">General Request</button>
             </div>
             <input type="hidden" name="formType" value="Student Request">
+            <input type="hidden" name="_subject" value="New MJC Music Booking">
+            <input type="hidden" name="_next" value="https://mjcmusic.org/contact.html">
+            <input type="hidden" name="_replyto">
             <label>
               <span class="label-text">Your Name <span class="required-star" aria-hidden="true">*</span></span>
               <input type="text" name="name" required placeholder="Your full name">
             </label>
             <label>
               <span class="label-text">Email <span class="required-star" aria-hidden="true">*</span></span>
-              <input type="email" name="email" required placeholder="you@example.com">
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
             </label>
             <label>
               Phone
